@@ -10,10 +10,6 @@
   user-select: none; /* Standard syntax */
 }
 
-.link_card:not(:first-child) {
-  margin-left: 30px;
-}
-
 .link_card > svg {
   fill: #ffffff;
 }
@@ -22,4 +18,19 @@
   font-size: 2em;
   margin: 0px;
   margin-left: 10px;
+}
+
+@media(max-width: 600px) {
+  .link_card {
+    border-radius: 5%; 
+  }
+
+  .link_card > svg {
+    width: 5em;
+    height: 100%;
+  }
+
+  .link_card > p {
+    font-size: 5em;
+  }
 }

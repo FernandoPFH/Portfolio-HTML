@@ -1,3 +1,304 @@
 img {
     object-fit: contain;
 }
+
+body {
+    margin: 0px;
+    font-family: 'Inter';
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.topic > h1 {
+    font-size: 3em;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+#Home {
+    justify-content: center;
+    height: 100vh;
+    background-color: #43ABE5;
+    color: #FFFFFF;
+}
+
+#Home svg {
+    fill: currentColor;
+}
+
+#Home img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#Home h1 {
+    font-size: 2em;
+}
+
+#Home h1 strong{
+    font-size: 2em;
+}
+
+#Home p {
+    margin-left: 10px;
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+
+#Home > div:first-child {
+    display: flex;
+    flex-direction: row;
+    width: 69%;
+}
+
+#Home > div:first-child > div:first-child {
+    width: 79%;
+}
+
+#Home > div:first-child > div:nth-child(2) {
+    width: 21%;
+    display: flex;
+    margin: auto;
+}
+
+#Home > div:nth-child(2) {
+    width: 110px;
+    aspect-ratio: 1;
+    position: absolute;
+    bottom: 0px;
+    transform: rotate(90deg) scaleX(.4) translateX(94px);
+}
+
+#LittleAboutMe {
+    background-color: #F0EDDA;
+}
+
+#LittleAboutMe p {
+    font-size: 2em;
+    text-align: justify;
+}
+
+#LittleAboutMe a {
+    color: inherit;
+}
+
+#LittleAboutMe > div {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+#LittleAboutMe > div > div:first-child {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child > div {
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child > div > img {
+    height: 60%;
+    object-fit: cover;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child > div > div {
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child > div > div > img {
+    width: 50%;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child > img {
+    width: 43%;
+}
+
+#LittleAboutMe > div > div:first-child > div:nth-child(2) {
+    width: 55%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#LittleAboutMe > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:first-child {
+    width: 55%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) > img {
+    width: 39%;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) > div {
+    width: 61%;
+    display: flex;
+    flex-direction: column;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) > div > img:first-child {
+    height: 60%;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) > div > img:nth-child(2) {
+    height: 40%;
+}
+
+#Projects {
+    background-color: #21221F;
+    color: #FFFFFF;
+}
+
+#Skills {
+    background-color: #43ABE5;
+    color: #FFFFFF;
+}
+
+#Skills > #SkillsHolder {
+    width: 90%;
+}
+
+#Links {
+    background-color: #F0EDDA;
+    color: #21221F;
+}
+
+#Links > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#Footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 5%;
+    background-color: #414141;
+    color: #FFFFFF;
+}
+
+#Footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#Footer > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+@media(max-width: 600px) {
+    .topic > h1 {
+        font-size: 5em;
+    }
+
+    #Home h1 {
+        font-size: 5em;
+        text-align: center;
+    }
+    
+    #Home h1 strong{
+        font-size: 1.5em;
+    }
+
+    #Home p {
+        font-size: 4em;
+        padding-right: 0px;
+    }
+
+    #Home > div:first-child {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    
+    #Home > div:first-child > div:first-child {
+        width: 100%;
+    }
+    
+    #Home > div:first-child > div:nth-child(2) {
+        width: 75%;
+        display: flex;
+        margin: auto;
+    }
+
+
+    #LittleAboutMe > div {
+        width: 85%;
+    }
+    
+    #LittleAboutMe > div > div:first-child {
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+    }
+    
+    #LittleAboutMe > div > div:first-child > div:first-child {
+        width: 100%;
+    }
+    
+    #LittleAboutMe > div > div:first-child > div:nth-child(2) {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #LittleAboutMe > div > div:nth-child(2) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    #LittleAboutMe > div > div:nth-child(2) > div:first-child {
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+    #LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) {
+        width: 100%;
+    }
+
+    #Links > div {
+        flex-wrap: wrap;
+        width: 95%;
+        justify-content: center;
+    }
+
+    #Footer p, #Footer a {
+        font-size: 1.6em;
+    }
+}
