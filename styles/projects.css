@@ -1,0 +1,141 @@
+.projects_type_holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  opacity: 0%;
+}
+
+@keyframes project_fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.projects_type_holder.in-view {
+  animation-name: project_fadein;
+  animation-duration: 2s;
+  opacity: 100%;
+}
+
+.projects_type_holder > h1 {
+  font-size: 3em;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.projects_type_holder > .arrow {
+  position: absolute;
+  width: 5%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  fill: #ffffff;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.projects_card_holder {
+  width: 80%;
+  display: -webkit-inline-box;
+  overflow: hidden;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+.project_card img {
+  width: 100%;
+  margin: auto;
+}
+
+.project_card > div {
+  width: 50%;
+  display: flex;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project_info > h1 {
+  border-bottom: #ffffff solid 1px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project_info > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project_info > p {
+  padding: 10px;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.project_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  color: #21221f;
+  width: fit-content;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.project_link:not(:first-child) {
+  margin-left: 30px;
+}
+
+.project_link > p {
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.project_index {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.project_index > div {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.project_index > div:not(:first-child) {
+  margin-left: 5px;
+}
+
+.project_index > div > div {
+  width: 0%;
+  height: 0%;
+  background-color: #21221f;
+  border-radius: 50%;
+  margin: auto;
+}

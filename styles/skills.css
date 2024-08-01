@@ -1,0 +1,44 @@
+.skill_type {
+  width: 100%;
+}
+
+.skill_type > h1 {
+  border-bottom: #ffffff solid 1px;
+}
+
+.skill_type > div {
+  width: 95%;
+  margin: auto;
+}
+
+@keyframes skill_expand {
+  from {
+    width: 0%;
+  }
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(130, 0, 185, 1) 0%,
+    rgba(25, 62, 171, 1) 51%,
+    rgba(0, 185, 6, 1) 100%
+  );
+  width: 0%;
+  overflow: hidden;
+}
+
+.skill.in-view {
+  animation-name: skill_expand;
+}
+
+.skill > p {
+  margin: 10px 0px;
+  white-space: nowrap;
+}

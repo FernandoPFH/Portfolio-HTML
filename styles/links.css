@@ -1,0 +1,25 @@
+.link_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  padding: 7px;
+  border-radius: 5px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.link_card:not(:first-child) {
+  margin-left: 30px;
+}
+
+.link_card > svg {
+  fill: #ffffff;
+}
+
+.link_card > p {
+  font-size: 2em;
+  margin: 0px;
+  margin-left: 10px;
+}
