@@ -19,14 +19,14 @@ const projects = {
             "title":"Farah Zero - Unity",
             "github_link":"https://github.com/FernandoPFH/FarahZero-Game-Unity",
             "demo_link":null,
-            "desc":"A F-Zero GX and Mario Kart 8 inspired game, race with full 3D caotic moviment."
+            "desc":"A F-Zero GX and Mario Kart 8 inspired game, race with full 3D chaotic movement."
         },
         {
             "img":"https://raw.githubusercontent.com/FernandoPFH/FightingProject-Game-Unity/main/Imagens/MenuInicial.png",
             "title":"Fighting Project - Unity",
             "github_link":"https://github.com/FernandoPFH/FightingProject-Game-Unity",
             "demo_link":null,
-            "desc":"A 3D fighting experience in a the big city. Can you handle the heat?"
+            "desc":"A 3D fighting experience in the big city. Can you handle the heat?"
         }
     ],
     "VR/AR Experiences": [
@@ -35,7 +35,7 @@ const projects = {
             "title":"Eureka 2022 - Unity",
             "github_link":"https://github.com/FernandoPFH/ProjetoEureka2022-Unity",
             "demo_link":null,
-            "desc":"Space experiencie to showcase the possibilities to conect the Virtual Spaceship to a Real Life arduino. Presented in a university convention in 2022."
+            "desc":"Space experience to showcase the possibilities to connect the Virtual Spaceship to a Real Life arduino. Presented in a university convention in 2022."
         },
         {
             "img":"https://raw.githubusercontent.com/FernandoPFH/HandsOn2023-Threejs/main/Imagens/MenuInicial.png",
@@ -72,7 +72,7 @@ const projects = {
             "title":"Sorting Algorithms - P5.js",
             "github_link":"https://github.com/FernandoPFH/SortingAlgorithms-OnlineComparator-P5js",
             "demo_link":"https://fernandopfh.github.io/SortingAlgorithms-OnlineComparator-P5js/",
-            "desc":"Web app to compare the time betwen multiple sorting algorithms.<br><br><strong>Web Demo Live Now!</strong>"
+            "desc":"Web app to compare the time between multiple sorting algorithms.<br><br><strong>Web Demo Live Now!</strong>"
         }
     ]
 }

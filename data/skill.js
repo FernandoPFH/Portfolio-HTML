@@ -1,7 +1,7 @@
 const skills_animationTimeSeconds = 2;
 
 const skills = {
-    "Program Languages": [
+    "Programming Languages": [
         {"name":"Python","score":95},
         {"name":"C#","score":90},
         {"name":"C++","score":70},
