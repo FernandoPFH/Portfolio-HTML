@@ -19,18 +19,3 @@
   margin: 0px;
   margin-left: 10px;
 }
-
-@media(max-width: 600px) {
-  .link_card {
-    border-radius: 5%; 
-  }
-
-  .link_card > svg {
-    width: 5em;
-    height: 100%;
-  }
-
-  .link_card > p {
-    font-size: 5em;
-  }
-}

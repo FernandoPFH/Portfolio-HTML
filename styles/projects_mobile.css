@@ -1,0 +1,36 @@
+.project_card {
+  display: flex;
+  flex-direction: column-reverse;
+  /* justify-content: space-between; */
+}
+
+.project_card > div {
+  width: 100%;
+}
+
+.project_card > div:first-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project_info {
+  padding: 0px;
+}
+
+.project_info > h1 {
+  font-size: 3em;
+}
+
+.project_info > div {
+  justify-content: space-evenly;
+}
+
+.project_info > p {
+  padding: 0px 5px;
+}
+
+.project_index > div {
+  width: 40px;
+  height: 40px;
+}

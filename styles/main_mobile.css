@@ -1,0 +1,76 @@
+.topic > h1 {
+  font-size: 5em;
+}
+
+#Home h1 {
+  font-size: 5em;
+  text-align: center;
+}
+
+#Home h1 strong {
+  font-size: 1.5em;
+}
+
+#Home p {
+  font-size: 4em;
+  padding-right: 0px;
+}
+
+#Home > div:first-child {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 90%;
+}
+
+#Home > div:first-child > div:first-child {
+  width: 100%;
+}
+
+#Home > div:first-child > div:nth-child(2) {
+  width: 75%;
+  display: flex;
+  margin: auto;
+}
+
+#LittleAboutMe > div {
+  width: 85%;
+}
+
+#LittleAboutMe > div > div:first-child {
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+#LittleAboutMe > div > div:first-child > div:first-child {
+  width: 100%;
+}
+
+#LittleAboutMe > div > div:first-child > div:nth-child(2) {
+  width: 100%;
+  margin-left: 0px;
+}
+
+#LittleAboutMe > div > div:nth-child(2) {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:first-child {
+  width: 100%;
+  margin-right: 0px;
+}
+
+#LittleAboutMe > div > div:nth-child(2) > div:nth-child(2) {
+  width: 100%;
+}
+
+#Links > div {
+  flex-wrap: wrap;
+  width: 95%;
+  justify-content: center;
+}
+
+#Footer p,
+#Footer a {
+  font-size: 1.6em;
+}
