@@ -15,19 +15,19 @@ const projects = {
             "desc":"Reimagine of the classic game Dodger in 3D. Multiples meteors come to destroy you. Can you DODGE all of them?<br><br><strong>Web Demo Live Now!</strong>"
         },
         {
+            "img":"https://raw.githubusercontent.com/FernandoPFH/FightingProject-Game-Unity/main/Imagens/MenuInicial.png",
+            "title":"Fighting Project - Unity",
+            "github_link":"https://github.com/FernandoPFH/FightingProject-Game-Unity",
+            "demo_link":null,
+            "desc":"A 3D fighting experience in the big city. Can you handle the heat?"
+        },
+        {
             "img":"https://raw.githubusercontent.com/FernandoPFH/FarahZero-Game-Unity/main/Imagens/MenuInicial.PNG",
             "title":"Farah Zero - Unity",
             "github_link":"https://github.com/FernandoPFH/FarahZero-Game-Unity",
             "demo_link":null,
             "desc":"A F-Zero GX and Mario Kart 8 inspired game, race with full 3D chaotic movement."
         },
-        {
-            "img":"https://raw.githubusercontent.com/FernandoPFH/FightingProject-Game-Unity/main/Imagens/MenuInicial.png",
-            "title":"Fighting Project - Unity",
-            "github_link":"https://github.com/FernandoPFH/FightingProject-Game-Unity",
-            "demo_link":null,
-            "desc":"A 3D fighting experience in the big city. Can you handle the heat?"
-        }
     ],
     "VR/AR Experiences": [
         {
@@ -46,6 +46,13 @@ const projects = {
         }
     ],
     "Miscellaneous Projects": [
+        {
+            "img":"https://github.com/FernandoPFH/ShadersLab-OnlineDemo-Unity/main/Imagems/TelaInicial.png",
+            "title":"Shader Lab - Unity",
+            "github_link":"https://github.com/FernandoPFH/ShadersLab-OnlineDemo-Unity",
+            "demo_link":"https://fernandopfh.github.io/ShadersLab-OnlineDemo-Unity/",
+            "desc":"Interactive lab where you can check out all the Shaders I have created so far and even play with them from your browser!<br><br><strong>Web Demo Live Now!</strong>"
+        },
         {
             "img":"https://raw.githubusercontent.com/FernandoPFH/BezierCurves-OnlineDemo-P5js/main/Imagems/Captura_CurvaBezier.PNG",
             "title":"Bezier Curves - P5.js",
