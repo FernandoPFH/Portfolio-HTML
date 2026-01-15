@@ -47,7 +47,7 @@ const projects = {
     ],
     "Miscellaneous Projects": [
         {
-            "img":"https://github.com/FernandoPFH/ShadersLab-OnlineDemo-Unity/main/Imagems/TelaInicial.png",
+            "img":"https://raw.githubusercontent.com/FernandoPFH/ShadersLab-OnlineDemo-Unity/main/Imagems/TelaInicial.png",
             "title":"Shader Lab - Unity",
             "github_link":"https://github.com/FernandoPFH/ShadersLab-OnlineDemo-Unity",
             "demo_link":"https://fernandopfh.github.io/ShadersLab-OnlineDemo-Unity/",
