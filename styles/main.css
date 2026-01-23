@@ -79,6 +79,10 @@ body {
   background-color: #f0edda;
 }
 
+#LittleAboutMe img {
+  object-fit: unset !important;
+}
+
 #LittleAboutMe p {
   font-size: 2em;
   text-align: justify;
@@ -99,6 +103,7 @@ body {
   flex-direction: row;
   width: 100%;
   margin-bottom: 20px;
+  height: 497px;
 }
 
 #LittleAboutMe > div > div:first-child > div:first-child {
@@ -145,6 +150,12 @@ body {
   flex-direction: row;
   width: 100%;
   margin-bottom: 20px;
+  height: 455px;
+}
+
+@media (min-width: 500px) {
+	#LittleAboutMe > div > div:first-child { height: auto; }
+	#LittleAboutMe > div > div:nth-child(2) { height: auto; }
 }
 
 #LittleAboutMe > div > div:nth-child(2) > div:first-child {
@@ -187,6 +198,11 @@ body {
   > div
   > img:nth-child(2) {
   height: 40%;
+}
+
+#WorkExperience {
+	background-color: #E56C43;
+	color: #ffffff;
 }
 
 #Projects {
