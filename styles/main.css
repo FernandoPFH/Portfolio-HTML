@@ -153,11 +153,6 @@ body {
   height: 455px;
 }
 
-@media (min-width: 500px) {
-	#LittleAboutMe > div > div:first-child { height: auto; }
-	#LittleAboutMe > div > div:nth-child(2) { height: auto; }
-}
-
 #LittleAboutMe > div > div:nth-child(2) > div:first-child {
   width: 55%;
   margin-right: 30px;
