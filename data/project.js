@@ -1,6 +1,12 @@
 const projects = {
     "Games Made": [
         {
+            "img":"images/projects/byb_capsule.jpg",
+            "title":"Backyard Baseball (2026)",
+            "steam_link":"https://store.steampowered.com/app/3935020/Backyard_Baseball/",
+            "desc":"I was the lead developer for VFX implementation, responsible for designing, developing, and maintaining robust visual effects systems.<br> Proven ability in team management, coordinating tasks, mentoring developers, and conducting thorough code reviews. Actively involved in the development of internal systems and tools, performance, and maintainability, while ensuring long-term stability and evolution of the VFX pipeline."
+        },
+        {
             "img":"https://raw.githubusercontent.com/FernandoPFH/MemoryPuzzle-Game-Unity/main/Imagens/MenuInicial.PNG",
             "title":"Memory Puzzle - Unity",
             "github_link":"https://github.com/FernandoPFH/MemoryPuzzle-Game-Unity",
@@ -52,6 +58,13 @@ const projects = {
             "github_link":"https://github.com/FernandoPFH/ShadersLab-OnlineDemo-Unity",
             "demo_link":"https://fernandopfh.github.io/ShadersLab-OnlineDemo-Unity/",
             "desc":"Interactive lab where you can check out all the Shaders I have created so far and even play with them from your browser!<br><br><strong>Web Demo Live Now!</strong>"
+        },
+        {
+            "img":"https://raw.githubusercontent.com/FernandoPFH/GameJuice-OnlineDemo-Unity/refs/heads/main/Imagems/TelaInicial.png",
+            "title":"Game Juice - Unity",
+            "github_link":"https://github.com/FernandoPFH/GameJuice-OnlineDemo-Unity",
+            "demo_link":"https://fernandopfh.github.io/GameJuice-OnlineDemo-Unity/",
+            "desc":"Interactive experience where you can check out many ways to make an game juicier!<br>Based on this <a href=\"https://www.youtube.com/watch?v=Fy0aCDmgnxg\" target=\"_blank\">GDC Talk</a>.<br><br><strong>Web Demo Live Now!</strong>"
         },
         {
             "img":"https://raw.githubusercontent.com/FernandoPFH/BezierCurves-OnlineDemo-P5js/main/Imagems/Captura_CurvaBezier.PNG",
