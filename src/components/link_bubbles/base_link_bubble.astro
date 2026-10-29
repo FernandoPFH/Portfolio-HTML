@@ -1,0 +1,28 @@
+---
+const { text, link, style } = Astro.props;
+---
+
+<a href={link} style={style} target="_blank" rel="noopener noreferrer">
+    <slot />
+    <p>{text}</p>
+</a>
+
+<style>
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  padding: 7px;
+  border-radius: 5px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+p {
+  font-size: 2em;
+  margin: 0px;
+  margin-left: 10px;
+}
+</style>

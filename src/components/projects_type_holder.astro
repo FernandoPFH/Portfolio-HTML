@@ -1,0 +1,244 @@
+---
+import SideArrow from "./side_arrow.astro";
+import ProjectCard from "./project_card.astro";
+import ProjectIndexItem from "./project_index_item.astro";
+const { title, projects } = Astro.props;
+---
+
+<div class="projects_type_holder trigger-in-view">
+    <h1>{title}</h1>
+    <div class="projects_card_holder">
+        {projects.map((project: object) => (
+            <ProjectCard {...project}></ProjectCard>
+        ))}
+    </div>
+    <div class="project_index">
+        <ProjectIndexItem isFirst ></ProjectIndexItem>
+        {projects.slice(1).map((project: object) => (
+            <ProjectIndexItem></ProjectIndexItem>
+        ))}
+    </div>
+    <SideArrow style="transform: translate(0%, -50%) rotate(180deg); left: 30px;"></SideArrow>
+    <SideArrow style="right: 30px;"></SideArrow>
+</div>
+
+<script>
+  var duration = 500;
+
+  var animating = false;
+
+  function moveLinear_ProjectCard(projectCard,distance,oncomplete) {
+    animating = true;
+
+    if (projectCard.style.left == ''){
+      projectCard.style.left = 0;
+    }
+
+    let toPosition = ((projectCard.style.left != '')?parseInt(projectCard.style.left.replace("px","")):0) + distance;
+
+    let anim = projectCard.animate({
+      left:`${toPosition}px`
+    },{duration:duration,easing:'ease-in-out'});
+    
+    anim.finished.then(_ => {
+      projectCard.style.left=`${toPosition}px`;
+      animating = false;
+      if (oncomplete)
+        oncomplete();
+    });
+  }
+
+  function feadOut_ProjectIndex(projectIndex) {
+    let anim = projectIndex.children[0].animate({
+      height: '0%',
+      width: '0%'
+    },{duration:duration/2});
+
+    anim.finished.then(_=>{
+      projectIndex.innerHTML = '';
+    });
+  }
+
+  function feadIn_ProjectIndex(projectIndex) {
+    let indicator = document.createElement("dot");
+
+    console.log(projectIndex);
+
+    projectIndex.appendChild(indicator);
+
+    let anim = projectIndex.children[0].animate({
+      width: '75%',
+      height: '75%'
+    },{duration:duration/2});
+
+    anim.finished.then(_=>{
+      indicator.style.width='75%';
+      indicator.style.height='75%';
+    });
+  }
+
+  function project_interactions_setup(project_type_holder:HTMLElement) {
+    var projects_elements = project_type_holder.querySelectorAll(".project_card");
+    var projects_element_index = 0;
+    var projects_index_element = project_type_holder.querySelector(".project_index");
+
+    var project_index_items = project_type_holder.querySelectorAll(".project-index-item");
+
+    for (let i = 0; i < project_index_items.length; i++) {
+      (project_index_items[i] as HTMLElement).onclick = _ => {moveProjectCard(i)};
+    }
+
+    // Cria indicador de Index
+    let project_index_indicator = document.createElement("div");
+    project_index_indicator.style.width = '75%';
+    project_index_indicator.style.height = '75%';
+    // projects_index_element = project_index_indicator;
+
+    function moveProjectCard(targetElementIndex) {
+      if (projects_elements.length == 1 || animating)
+        return;
+
+      let cardWidth = projects_elements[projects_element_index].clientWidth;
+
+      if (targetElementIndex < 0) {
+        targetElementIndex = projects_elements.length - 1;
+
+        let currentProjectCard = projects_elements[projects_element_index]
+        let nextProjectCard = projects_elements[targetElementIndex]
+
+        let toPosition = ((nextProjectCard.style.left != '')?parseInt(nextProjectCard.style.left.replace("px","")):0) - cardWidth * projects_elements.length;
+        nextProjectCard.style.left = `${toPosition}px`;
+
+        moveLinear_ProjectCard(currentProjectCard,cardWidth);
+        moveLinear_ProjectCard(nextProjectCard,cardWidth,_=>{
+          projects_elements.forEach(project_element => {
+            let toPosition = -cardWidth * (projects_elements.length-1);
+            project_element.style.left = `${toPosition}px`;
+          });
+        });
+      } else if (projects_elements.length <= targetElementIndex) {
+        targetElementIndex = 0;
+
+        let currentProjectCard = projects_elements[projects_element_index]
+        let nextProjectCard = projects_elements[targetElementIndex]
+
+        let toPosition = ((nextProjectCard.style.left != '')?parseInt(nextProjectCard.style.left.replace("px","")):0) + cardWidth * projects_elements.length;
+        nextProjectCard.style.left = `${toPosition}px`;
+
+        moveLinear_ProjectCard(currentProjectCard,-cardWidth);
+        moveLinear_ProjectCard(nextProjectCard,-cardWidth,_=>{
+          projects_elements.forEach(project_element => {
+            if (project_element == nextProjectCard)
+              return;
+            
+            project_element.style.left = `0px`;
+          });
+        },duration);
+      } else {
+        if (projects_element_index - targetElementIndex == 0) {
+          return;
+        } else {
+          projects_elements.forEach(project_element => {
+            let direction = projects_element_index - targetElementIndex;
+
+            moveLinear_ProjectCard(project_element,direction*cardWidth);
+          });
+        }
+      }
+
+      feadOut_ProjectIndex(projects_index_element.children[projects_element_index]);
+      feadIn_ProjectIndex(projects_index_element.children[targetElementIndex]);
+      projects_element_index = targetElementIndex;
+    }
+
+    var side_arrows = project_type_holder.querySelectorAll(".side-arrow");
+
+    side_arrows[0].onclick = _ => {moveProjectCard(projects_element_index-1)};
+
+    side_arrows[1].onclick = _ => {moveProjectCard(projects_element_index+1)};
+  }
+
+  document.querySelectorAll(".projects_type_holder").forEach(
+    (el) => {
+        project_interactions_setup(el as HTMLElement);
+    });
+</script>
+
+<style>
+.projects_type_holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  opacity: 0%;
+}
+
+@keyframes project_fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.projects_type_holder.in-view {
+  animation-name: project_fadein;
+  animation-duration: 2s;
+  opacity: 100%;
+}
+
+.projects_type_holder > h1 {
+  font-size: 3em;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.projects_type_holder > .side-arrow {
+  position: absolute;
+  width: 5%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  fill: #ffffff;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.projects_card_holder {
+  width: 80%;
+  display: -webkit-inline-box;
+  overflow: hidden;
+}
+
+.project_index {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.project_index > div {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_index > div:not(:first-child) {
+  margin-left: 5px;
+}
+
+.project_index > div > div {
+  width: 0%;
+  height: 0%;
+  background-color: #21221f;
+  border-radius: 50%;
+}
+</style>

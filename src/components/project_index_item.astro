@@ -1,0 +1,31 @@
+---
+const { isFirst } = Astro.props;
+---
+
+<background class="project-index-item">
+    {isFirst && <dot style="width: 75%; height: 75%;"></dot>}
+</background>
+
+<style is:global>
+background {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+background:not(:first-child) {
+  margin-left: 5px;
+}
+
+dot {
+  width: 0%;
+  height: 0%;
+  background-color: #21221f;
+  border-radius: 50%;
+}
+</style>
