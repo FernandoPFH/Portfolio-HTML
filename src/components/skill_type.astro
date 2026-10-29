@@ -1,0 +1,32 @@
+---
+const { title, skills } = Astro.props;
+import Skill from "./skill.astro";
+
+skills.sort(function(a, b){
+        return b['score'] - a['score'];
+    })
+---
+
+<skill_type>
+    <h1>{title}</h1>
+    <div>
+        {skills.map((skill: object) => (
+            <Skill {...skill}></Skill>
+        ))}
+    </div>
+</skill_type>
+
+<style>
+skill_type {
+  width: 100%;
+}
+
+h1 {
+  border-bottom: #ffffff solid 1px;
+}
+
+div {
+  width: 95%;
+  margin: auto;
+}
+</style>

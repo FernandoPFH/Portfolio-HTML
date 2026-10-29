@@ -1,0 +1,25 @@
+---
+import SkillType from '../components/skill_type.astro';
+import skills from '../data/skill.json';
+---
+
+<div id="Skills" class="topic">
+    <h1>Skills</h1>
+    <div id="SkillsHolder">
+        {Object.keys(skills).map((key:string) => (
+            <SkillType title={key} skills={skills[key]}></SkillType>
+        ))}
+        {}
+    </div>
+</div>
+
+<style>
+#Skills {
+  background-color: #43abe5;
+  color: #ffffff;
+}
+
+#Skills > #SkillsHolder {
+  width: 90%;
+}
+</style>

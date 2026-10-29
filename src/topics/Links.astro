@@ -1,0 +1,30 @@
+---
+import LinkedinLinkBubble from "../components/link_bubbles/linkedin_link_bubble.astro";
+import GithubLinkBubble from "../components/link_bubbles/github_link_bubble.astro";
+import EmailLinkBubble from "../components/link_bubbles/email_link_bubble.astro";
+import ResumeLinkBubble from "../components/link_bubbles/resume_link_bubble.astro";
+---
+
+<links id="Links" class="topic">
+    <h1>Links</h1>
+    <div>
+        <LinkedinLinkBubble></LinkedinLinkBubble>
+        <GithubLinkBubble></GithubLinkBubble>
+        <EmailLinkBubble></EmailLinkBubble>
+        <ResumeLinkBubble></ResumeLinkBubble>
+    </div>
+</links>
+
+<style>
+links {
+  background-color: #f0edda;
+  color: #21221f;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+</style>

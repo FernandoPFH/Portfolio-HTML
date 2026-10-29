@@ -1,16 +1,14 @@
-.skill_type {
-  width: 100%;
-}
+---
+const { name, score } = Astro.props;
 
-.skill_type > h1 {
-  border-bottom: #ffffff solid 1px;
-}
+const skills_animationTimeSeconds = 2.0;
+---
 
-.skill_type > div {
-  width: 95%;
-  margin: auto;
-}
+<div class="skill trigger-in-view">
+    <p>{name}</p><p>{score}</p>
+</div>      
 
+<style define:vars={{ score:`${score}%`, animationDuration:`${skills_animationTimeSeconds * (score/100)}s` }}>
 @keyframes skill_expand {
   from {
     width: 0%;
@@ -30,8 +28,9 @@
     rgba(25, 62, 171, 1) 51%,
     rgba(0, 185, 6, 1) 100%
   );
-  width: 0%;
   overflow: hidden;
+  width: var(--score);
+  animation-duration: var(--animationDuration);
 }
 
 .skill.in-view {
@@ -42,3 +41,4 @@
   margin: 10px 0px;
   white-space: nowrap;
 }
+</style>

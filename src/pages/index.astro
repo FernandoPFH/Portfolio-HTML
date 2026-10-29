@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../topics/Footer.astro";
+import Home from "../topics/Home.astro";
+import Links from "../topics/Links.astro";
+import LittleAboutMe from "../topics/LittleAboutMe.astro";
+import Projects from "../topics/Projects.astro";
+import Skills from "../topics/Skills.astro";
+---
+
+<BaseLayout title="Home">
+	<Home></Home>
+	<LittleAboutMe></LittleAboutMe>
+	<Projects></Projects>
+	<Skills></Skills>
+	<Links></Links>
+	<Footer></Footer>
+</BaseLayout>
+
+<script>
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('in-view');
+				return;
+			}
+		}, {threshold:0.3});
+	});
+
+	document.querySelectorAll('.trigger-in-view').forEach((element) => observer.observe(element));
+</script>
+
+<style is:global>
+.topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.topic > h1 {
+  font-size: 3em;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+</style>

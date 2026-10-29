@@ -1,0 +1,19 @@
+---
+import projects from '../data/project.json';
+import ProjectsTypeHolder from '../components/projects_type_holder.astro';
+---
+
+<div id="Projects" class="topic">
+    <div id="projects_type_holder">
+        {Object.keys(projects).map((key:string) => (
+            <ProjectsTypeHolder title={key} projects={projects[key]}></ProjectsTypeHolder>
+        ))}
+    </div>
+</div>
+
+<style>
+    #Projects {
+    background-color: #21221f;
+    color: #ffffff;
+    }
+</style>

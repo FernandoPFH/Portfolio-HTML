@@ -1,7 +1,7 @@
-const projects = {
+{
     "Games Made": [
         {
-            "img":"images/projects/byb_capsule.jpg",
+            "img":"/Portfolio-HTML/images/projects/byb_capsule.jpg",
             "title":"Backyard Baseball (2026)",
             "steam_link":"https://store.steampowered.com/app/3935020/Backyard_Baseball/",
             "desc":"I was the lead developer for VFX implementation, responsible for designing, developing, and maintaining robust visual effects systems.<br> Proven ability in team management, coordinating tasks, mentoring developers, and conducting thorough code reviews. Actively involved in the development of internal systems and tools, performance, and maintainability, while ensuring long-term stability and evolution of the VFX pipeline."
@@ -33,7 +33,7 @@ const projects = {
             "github_link":"https://github.com/FernandoPFH/FarahZero-Game-Unity",
             "demo_link":null,
             "desc":"A F-Zero GX and Mario Kart 8 inspired game, race with full 3D chaotic movement."
-        },
+        }
     ],
     "VR/AR Experiences": [
         {

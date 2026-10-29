@@ -1,0 +1,65 @@
+---
+const { title, img, steam_link, github_link, demo_link, desc } = Astro.props;
+import SteamLinkCard from "./link_cards/steam_link_card.astro";
+import GithubLinkCard from "./link_cards/github_link_card.astro";
+import DemoLinkCard from "./link_cards/demo_link_card.astro";
+---
+
+<div class="project_card">
+    <div>
+        <img src={img} />
+    </div>
+    <div class="project_info">
+        <h1>{title}</h1>
+        <div>
+            {steam_link && <SteamLinkCard link={steam_link}></SteamLinkCard>}
+            {github_link && <GithubLinkCard link={github_link}></GithubLinkCard>}
+            {demo_link && <DemoLinkCard link={demo_link}></DemoLinkCard>}
+        </div>
+        <p><Fragment set:html={desc} /></p>
+    </div>
+</div>
+
+<style>
+.project_card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+.project_card img {
+  width: 100%;
+  margin: auto;
+}
+
+.project_card > div {
+  width: 50%;
+  display: flex;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project_info > h1 {
+  border-bottom: #ffffff solid 1px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project_info > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project_info > p {
+  padding: 10px;
+  width: 100%;
+  font-size: 1.5em;
+}
+</style>

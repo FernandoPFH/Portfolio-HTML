@@ -1,6 +1,4 @@
-const skills_animationTimeSeconds = 2;
-
-const skills = {
+{
     "Programming Languages": [
         {"name":"Python","score":95},
         {"name":"C#","score":95},

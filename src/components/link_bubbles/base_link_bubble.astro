@@ -1,4 +1,14 @@
-.link_card {
+---
+const { text, link, style } = Astro.props;
+---
+
+<a href={link} style={style} target="_blank" rel="noopener noreferrer">
+    <slot />
+    <p>{text}</p>
+</a>
+
+<style>
+a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,12 +20,9 @@
   user-select: none; /* Standard syntax */
 }
 
-.link_card > svg {
-  fill: #ffffff;
-}
-
-.link_card > p {
+p {
   font-size: 2em;
   margin: 0px;
   margin-left: 10px;
 }
+</style>
